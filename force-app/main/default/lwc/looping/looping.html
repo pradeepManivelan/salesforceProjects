@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Looping">
+        <div class="slds-var-m-around_small">
+            <template for:each={foodList} for:item="food">
+                <ul key={food} class="slds-list_dotted">
+                    <li>{food}</li>
+                  </ul>
+            </template>
+        </div>
+    </lightning-card>
+
+</template>

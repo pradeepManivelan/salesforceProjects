@@ -1,0 +1,14 @@
+<template>
+    <!-- <div>Hello World!</div> -->
+
+    <lightning-card  title="Personal Details">
+        <div class="slds-var-m-around_small">
+            <input type="text" class="slds-input" onkeyup={changeTitle}></input>
+            <div>{name} is a {title}</div>
+            <input type="text" class="slds-input" onkeyup={trackCity}></input>
+            <div>{name} is from {address.city}</div>
+            <!-- <input type="number" class="slds-input" onkeyup={assignValue}></input> -->
+            <div>Value is {multiply}</div>
+        </div>
+    </lightning-card>
+</template>
