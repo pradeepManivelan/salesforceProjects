@@ -8,5 +8,14 @@
             </template>
         </div>
     </lightning-card>
+    <lightning-card title="Iterator">
+        <div class="slds-var-m-around_small">
+            <template iterator:bikes={bikeList}>
+                <ul key={bikes.value.id} class="slds-list_dotted">
+                    <li>{bikes.value.name}</li>
+                  </ul>
+            </template>
+        </div>
+    </lightning-card>
 
 </template>
