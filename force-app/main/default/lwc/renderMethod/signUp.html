@@ -1,0 +1,16 @@
+<template>
+    <lightning-card>
+        <form>
+            <div class="slds-var-m-around_medium">
+                <lightning-input type="text" label="First Name" name="First Name" title="First Name"></lightning-input>
+                <lightning-input type="text" label="Last Name" name="Last Name" title="Last Name"></lightning-input>
+                <lightning-input type="email" label="Email Address" name="Email Address" title="Email Address"></lightning-input>
+                <lightning-input type="password" label="Password" name="Password" title="Password"></lightning-input>
+                <lightning-button variant="brand" title="Back" label="Back" onclick={changeHandler} class="slds-var-m-around_medium">
+                </lightning-button>
+                <lightning-button variant="success" title="Sign Up" label="Sign Up" onclick={changeHandler} class="slds-var-m-around_medium">
+                </lightning-button>
+            </div>
+        </form>
+    </lightning-card>
+</template>
