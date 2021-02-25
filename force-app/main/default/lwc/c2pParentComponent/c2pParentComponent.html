@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Parent Component">
+        <div class="slds-var-m-around_medium">
+            <lightning-button variant="brand" label="Click here to open modal" title="Modal button" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+            <template if:true={isVisible}>
+                <c-c2p-child-component
+                onclose={closeHandler}></c-c2p-child-component>
+            </template>
+
+        </div>
+    </lightning-card>
+</template>
