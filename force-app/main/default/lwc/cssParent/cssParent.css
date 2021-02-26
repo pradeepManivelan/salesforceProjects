@@ -1,0 +1,12 @@
+h1{
+    background-color: red;
+    color: white;
+}
+c-css-child{
+    display: block;
+
+    color:red;
+}
+p{
+    color:orange;
+}
