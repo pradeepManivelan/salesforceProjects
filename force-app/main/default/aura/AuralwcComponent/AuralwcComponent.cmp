@@ -1,0 +1,11 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+    <aura:attribute name="message" type="String"></aura:attribute>
+
+    <lightning:card title="Aura to LWC Component">
+        <div class="slds-p-around_medium">
+            {!v.message}
+        </div>
+        <c:lwcAuraComponent onsendMsg="{!c.handler}" title="Hello from Aura to LWC"></c:lwcAuraComponent>
+    </lightning:card>
+
+</aura:component>
