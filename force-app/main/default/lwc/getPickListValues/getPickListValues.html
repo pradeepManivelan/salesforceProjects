@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Pick list Details">
+        <div class="slds-m-aound_medium">
+            <lightning-combobox
+            name="Industry"
+            label="Industry"
+            value={selectedValue}
+            placeholder="Select Industry"
+            options={industryOptions}
+            onchange={handleChange} ></lightning-combobox>
+        </div>
+    </lightning-card>
+    <p>Selected Industry is {selectedValue}</p>
+</template>

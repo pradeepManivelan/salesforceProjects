@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Get Object Info Details">
+        <div class="slds-m-aound_medium">
+            {defaultRecordTypeId}
+        </div>
+    </lightning-card>
+    <lightning-card title="Get Object Infos Details">
+        <div class="slds-m-aound_medium">
+            <template if:true={objectDetails}>
+                <template for:each={objectDetails.results} for:item="object">
+                    <div key={object.result.apiName}>
+                        <p>API Name</p>{object.result.apiName}
+                        <p>DefaultRecordTypeId </p>{object.result.defaultRecordTypeId}
+                    </div>
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+</template>
