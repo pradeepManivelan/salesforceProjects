@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Get NavItems Details">
+        <div class="slds-m-aound_medium">
+            <template if:true={result}>
+                <div>{result.developerName}</div>
+                <div>{result.objectApiName}</div>
+                <div>{result.pageReference.type}</div>
+            </template>
+        </div>
+    </lightning-card>
+</template>
