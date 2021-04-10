@@ -12,6 +12,8 @@ export default class ApexAccountController extends LightningElement {
             this.accountList = data.map(item => {
                 let newName = item.Name === "Pradeep from India"?"Pradeep":item.Name;
                 console.log(newName);
+                let newItem = {...item, newName}
+                console.log(newItem);
                 return {...item, newName};
             })
         }

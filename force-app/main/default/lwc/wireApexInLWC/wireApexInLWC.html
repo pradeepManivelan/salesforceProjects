@@ -1,0 +1,23 @@
+<template>
+    <lightning-card title="Apex in LWC with params">
+        <div class="slds-p-around_medium">
+            <lightning-combobox
+                name="type"
+                label="type"
+                onchange={changeOptions}
+                options={getOptions}
+            >
+            </lightning-combobox>
+            <div class="slds-p-around_medium">
+               <template if:true={filteredAccounts.data}>
+                    <template for:each={filteredAccounts.data} for:item="account">
+                        <div class="slds-p-around_medium" key={account.Id}>
+                            <div>Name - {account.Name}</div>
+                            <div>Type - {account.Type}</div>
+                        </div>
+                    </template>
+               </template>
+            </div>
+        </div>
+    </lightning-card>
+</template>

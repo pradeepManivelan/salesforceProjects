@@ -2,11 +2,12 @@
     <lightning-card title="Apex in LWC">
         <div class="slds-p-around_medium">
             <template if:true={accounts.data}>
+            
                 <template for:each={accounts.data} for:item="account">
                     <div key={account.Id}>
                         <div>Name - {account.Name}</div>
-                        <div>Name - {account.Type}</div>
-                        <div>Name - {account.Industry}</div>
+                        <div>Type - {account.Type}</div>
+                        <div>Industry - {account.Industry}</div>
                     </div>
                 </template>
             </template>
@@ -14,8 +15,8 @@
                 <template for:each={accountList} for:item="account">
                     <div key={account.Id}>
                         <div>Name - {account.newName}</div>
-                        <div>Name - {account.Type}</div>
-                        <div>Name - {account.Industry}</div>
+                        <div>Type - {account.Type}</div>
+                        <div>Industry - {account.Industry}</div>
                     </div>
                 </template>
             </template>
