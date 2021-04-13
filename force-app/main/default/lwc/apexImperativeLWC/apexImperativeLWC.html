@@ -1,3 +1,18 @@
 <template>
+    <lightning-card title="Apex Imperative in LWC">
+        <div class="slds-p-around_medium">
+            <template if:true={accountList}>
+                <template for:each={accountList} for:item="account">
+                    <div key={account.Id} class="slds-paround_medium">
+                    Name - {account.Name}
+                    Type - {account.Type}
+                    Industry - {account.Industry}
+                    </div>
+                </template>
+            </template>
     
+            <lightning-button label="Call Account Method" variant="brand" onclick={handleAccount}></lightning-button>
+        </div>
+
+    </lightning-card>
 </template>
