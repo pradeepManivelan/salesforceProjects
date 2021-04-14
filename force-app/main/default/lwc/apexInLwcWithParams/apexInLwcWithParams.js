@@ -5,7 +5,7 @@ export default class ApexInLwcWithParams extends LightningElement {
     accounts;
     timer
     seachHandler(event){
-        window.clearInterval(this.timer);
+        window.clearTimeout(this.timer);
         this.searchKey = event.target.value;
  this.timer = setTimeout(() => {
      this.searchMethod
