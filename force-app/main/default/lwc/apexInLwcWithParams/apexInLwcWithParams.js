@@ -8,7 +8,7 @@ export default class ApexInLwcWithParams extends LightningElement {
         window.clearTimeout(this.timer);
         this.searchKey = event.target.value;
  this.timer = setTimeout(() => {
-     this.searchMethod
+     this.searchMethod();
  },1000)
     }
 
