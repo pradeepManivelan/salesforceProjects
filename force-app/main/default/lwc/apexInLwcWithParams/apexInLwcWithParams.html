@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="Apex in LWC with Params">
+        <div class="slds-p-around_medium">
+            <lightning-input
+            label="Search"
+            name="Search"
+            onchange={seachHandler}
+            >
+            </lightning-input>
+        </div>
+        <div class="slds-p-around_medium">
+            <template if:true={accounts}>
+                <template for:each={accounts} for:item="account"> 
+                    <div key={account.Id}>
+                        Name - {account.Name}
+                        Type - {account.Type}
+                        Industry = {account.Industry}
+                    </div>
+                </template>
+
+            </template>
+        </div>
+
+    </lightning-card>
+</template>
