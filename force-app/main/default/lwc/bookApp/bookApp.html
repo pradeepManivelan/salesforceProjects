@@ -1,3 +1,34 @@
 <template>
-    
+    <lightning-card title="Booking App">
+        <div class="slds-p-around_medium">
+            <lightning-input type="text" label="Search text" placeholder="Enter the book name" onchange={changeHandler}></lightning-input>
+            <lightning-layout multiple-rows>
+                <template if:true={books}>
+
+                    <template for:each={books.items} for:item="book">
+                        <lightning-layout-item size="3" padding="around-small" key={book.id}>
+                            <div class="slds-box slds-p-around_medium">
+                                <template if:true={book.volumeInfo.imageLinks}>
+                                    <img src={book.volumeInfo.imageLinks.smallThumbnail} height="200px" />
+                                </template>
+
+                                <div>Title - {book.volumeInfo.title} </div>
+                                <template if:true={book.saleInfo.listPrice}>
+                                    <div>Price - {book.saleInfo.listPrice.amount} </div>
+                                </template>
+                                <template if:false={book.saleInfo.listPrice}>
+                                    <div>Price - NA </div>
+                                </template>
+
+                            </div>
+                        </lightning-layout-item>
+                    </template>
+
+
+
+
+                </template>
+            </lightning-layout>
+        </div>
+    </lightning-card>
 </template>
