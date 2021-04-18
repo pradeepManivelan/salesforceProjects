@@ -1,7 +1,7 @@
 <template>
     <lightning-card title="Booking App">
         <div class="slds-p-around_medium">
-            <lightning-input type="text" label="Search text" placeholder="Enter the book name" onchange={changeHandler}></lightning-input>
+            <lightning-input type="search" label="Search text" placeholder="Enter the book name" onchange={changeHandler} value={searchKey}></lightning-input>
             <lightning-layout multiple-rows>
                 <template if:true={books}>
 

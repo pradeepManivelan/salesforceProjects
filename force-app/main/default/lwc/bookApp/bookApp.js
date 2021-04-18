@@ -1,5 +1,5 @@
 import { LightningElement } from 'lwc';
-const BOOKSURL= 'https://www.googleapis.com/books/v1/volumes?q=mark';
+const BOOKSURL= 'https://www.googleapis.com/books/v1/volumes?q=';
 export default class BookApp extends LightningElement {
     books;
     searchKey = 'Stephan';
@@ -9,10 +9,12 @@ export default class BookApp extends LightningElement {
     }
 
     changeHandler(event){
+        this.searchKey = event.detail.value;
         window.clearTimeout(this.timer);
         this.timer = setTimeout(() => {
             console.log(event.detail.value);
-        },2000)
+            this.fetchData();
+        },1000)
         
         // this.searchKey = event.details.value;
     }
