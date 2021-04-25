@@ -1,12 +1,17 @@
 <template>
-   <div class="container">
+    <div class="container">
         <div>
-            <img src={imageURL} style="height:40px; width:150px"/>
+            <img src={imageURL} style="height:40px; width:150px" />
             <div>
                 <div>Invoice No- {invoiceData.invoiceNo}</div>
                 <div>Invoice Date - {invoiceData.invoiceCreated}</div>
                 <div>Invoice Due - {invoiceData.invoiceDue}</div>
             </div>
+            <div>
+                <div>Company Name- {invoiceData.companyName}</div>
+                <div>Address1 - {invoiceData.address1}</div>
+                <div>Address2 - {invoiceData.address2}</div>
+            </div>
         </div>
-   </div> 
+    </div>
 </template>
