@@ -17,6 +17,23 @@
                 <div>Username - {clientData.username}</div>
                 <div>Email - {clientData.email}</div>
             </div>
+            <div>
+                <div>Service</div>
+                <div>Amount</div>
+                <template iterator:service={services}>
+                    <div key={service.value.name}>
+                         <div>{service.value.name}</div>
+                         <div>${service.value.amount}</div>
+                    </div>
+
+                    <div key={service.value.name}>
+                        <template if:true={service.last}>
+                            <div>Total Amount: ${totalAmount}</div>
+                        </template>
+                        
+                   </div>
+                </template>
+            </div>
         </div>
     </div>
 </template>
