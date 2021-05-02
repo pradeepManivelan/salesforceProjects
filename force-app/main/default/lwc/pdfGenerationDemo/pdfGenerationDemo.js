@@ -29,6 +29,7 @@ export default class PdfGenerationDemo extends LightningElement {
 
     pdfHandler(){
         let pdfContent = this.template.querySelector('.container');
+        console.log(pdfContent);
     }
     //pdf
 }
