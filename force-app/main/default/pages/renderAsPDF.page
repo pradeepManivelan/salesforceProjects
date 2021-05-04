@@ -1,7 +1,7 @@
-<apex:page controller={} cache="true" renderAs="pdf" applyHtmlTag="false" showHeader="false" readOnly="true">
+<apex:page controller={pdfPageController} cache="true" renderAs="pdf" applyHtmlTag="false" showHeader="false" readOnly="true">
     <html>
         <head>
             <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
     </html>
-    <apex:outputLabel value={} escape="false"></apex:outputLabel>
+    <apex:outputLabel value={!pdfText} escape="false"></apex:outputLabel>
 </apex:page>
