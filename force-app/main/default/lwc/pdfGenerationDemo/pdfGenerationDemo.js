@@ -32,11 +32,11 @@ export default class PdfGenerationDemo extends LightningElement {
     pdfHandler(){
         let pdfContent = this.template.querySelector('.container');
         console.log(pdfContent);
-        generatePDF({recordId:this.recordId,pdfContent}.then(result => {
+        generatePDF({recordId:this.recordId,htmlData:pdfContent.outerHTML}).then(result => {
             console.log(result);
         }).catch(error => {
             console.log(error);
-        }))
+        });
     }
     //pdf
 }
