@@ -4,7 +4,7 @@ import {loadScript} from "lightning/platformResourceLoader";
 export default class Charts extends LightningElement {
     renderedCallback(){
         loadScript(this, chartJS+'/chartJs/Chart.js').then(result => {
-            console.log(result)
+            console.log("chart loaded successfully" + result)
         }).catch(error => {
             console.log(error);
         })
