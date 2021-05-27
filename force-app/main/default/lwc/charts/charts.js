@@ -18,9 +18,10 @@ export default class Charts extends LightningElement {
     }
 
     loadChart(){
+        //It is an exception in chart JS to do this because chart js injects css to DOM
         window.Chart.platform.disableCSSInjection = true;
         const canvas = document.createElement('canvas');
-        this.template.queryselector('div.chart').appendChild(canvas);
+        this.template.querySelector('div.chart').appendChild(canvas);
         const ctx = canvas.getContext('2d');
         this.chart = new window.Chart(ctx, this.config());
     }
